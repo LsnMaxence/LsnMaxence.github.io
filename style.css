@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Cairo';
+    font-size: 1.3em;
+}
+/* ***** NAV BAR ***** */
+
+nav{
+    overflow: hidden;
+    background-color: rgb(212, 212, 212);
+    position:fixed; z-index: 10;
+    width: 100%;
+    opacity: 0.9;
+}
+nav ul ul li a{
+    color: white;
+}
+.Main{
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 15px 20px;
+}
+#logo{
+    font-weight: bold;
+    float: left;
+}
+nav ul ul{
+    visibility: hidden;
+    height: 0px;
+}
+nav ul li:hover ul{
+    visibility:visible;
+    height: 100%;
+}
+.Second{
+    background-color: rgb(52, 52, 139);
+    margin: 5 0;
+    padding: 5;
+    border-radius: 8px;
+}
+
+
+
+/* ***** Home ***** */
+
+#Home{
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    padding-bottom: 500px;
+    background-image: url(media/BackGroundHome.jpg);
+    background-size: cover;
+}
+#Title{
+    font-size: 4em;
+    font-family:'Fredoka',sans-serif;
+    padding-right: 90px;
+}
+#Title a {
+    font-family:'Courier New', sans-serif;
+    font-size: 0.5em;
+    color: white;
+    background-color: rgb(52, 52, 139);
+    padding: 1px 5px 1px 5px;
+    border-radius: 8px; 
+}
+#Photo{
+    padding-left: 90px;
+}
+
+/* ***** About Me ***** */
+
+#AboutMe{
+    margin-top: 2px;
+    padding-top: 65px;
+    background-image: url(media/BackGroundAboutMe.jpg);
+    padding-bottom: 150px;
+}
+.Container{
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative ;
+    width: 70%;
+    height: 0;
+    padding-bottom: 40%;
+    background: rgb(172, 168, 168);
+    border: solid 5px #00000091;
+    box-shadow: 12px 9px 8px -3px rgba(0,0,0,0.71);
+}
+.Slide_Img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.Slide_Img img{
+    width: 100%;
+    height: 100%;
+}
+#i1, #i2, #i3{
+    display:none;
+}
+.pre, .next{
+    width: 12%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(88,88,88,.4);
+    z-index: 99;
+    cursor: pointer;    
+}
+.pre{
+    left:0;
+}
+.next{
+    right:0;
+}
+.nav{
+    width: 100%;
+    height: 11px;
+    bottom: 12%;
+    position: absolute;
+    text-align: center;
+    z-index: 99
+}
+.dots{
+    top: -5px;
+    width: 18px;
+    height: 18px;
+    margin: 0 4px;
+    position: relative;
+    border-radius:50%;
+    display:inline-block;
+    background: rgba(173, 0, 0, 0.6);
+}
+.slide_img{
+    z-index: -1;
+}
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three{
+    z-index: 9;
+}
+#i1:checked ~ .nav #dot1,
+#i2:checked ~ .nav #dot2,
+#i3:checked ~ .nav #dot3{
+    background: #fff;
+}
+
+#WhatIDo{
+    text-align: center;
+    padding-top:50px ;
+    font-family: 'Fredoka';
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+/* ***** My Skills ***** */
+
+#Software{
+    height: 60px;
+    display:flex;
+    background-color: blueviolet;
+    text-align: center;
+}
+#NavPhotoshop, #NavPremierPro, #NavAfterEffect, #NavUnrealUngine, #NavVisualStudio{
+    padding: 5px 0px;
+    margin: 0 auto;
+}
+
+/* ***** Photoshop ***** */
+
+#Photoshop{
+    padding-top: 15px;
+    color: white;
+    text-align: center;
+    background-image: url(Media/BackgroundPhotoshop.jpg);
+}
+#Photoshop h3{
+    text-decoration: underline;
+    font-size: 2em;
+}
+#ExemplesPhotoshop{
+    font-family:'Fredoka',sans-serif;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+#TextPhotoshop {
+    padding: 15px 0;
+    font-size: 1.5em;
+    background-color: #3d84d1;
+    border-radius: 50px;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0.45);
+}
+#Pagaille, #Stoappy, #PlaquistSimulator{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    text-align: center;
+    font-family:'Fredoka',sans-serif;
+    font-size: 1.5em;
+    width: 100%;
+    background-color: rgba(36, 36, 36, 0.795);
+}
+
+/* ***** Premiere Pro ***** */
+
+#PremierPro{
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+    background-image: url(Media/BackgroundPhotoshop.jpg);
+}
+#PremierPro h3{
+    text-decoration: underline;
+    font-size: 2em;
+}
+#ExemplesPremierPro{
+    font-family:'Fredoka',sans-serif;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+#TextPremierPro {
+    padding: 15px 0;
+    font-size: 1.5em;
+    background-color: #9045a0;
+    border-radius: 50px;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0.45);
+}
+#Youtube, #Trailer, #Autres{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    text-align: center;
+    font-family:'Fredoka',sans-serif;
+    font-size: 1.5em;
+    width: 100%;
+    background-color: rgba(36, 36, 36, 0.795);
+}
+#VodTrailer{
+    padding:25px
+}
+
+/* ***** After Effect ***** */
+
+#AfterEffect{
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+    background-image: url(Media/BackgroundPhotoshop.jpg);
+}
+#PremierPro h3{
+    text-decoration: underline;
+    font-size: 2em;
+}
+#ExemplesPremierPro{
+    font-family:'Fredoka',sans-serif;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+#TextAfterEffect {
+    padding: 15px 0;
+    font-size: 1.5em;
+    background-color: #270243;
+    border-radius: 50px;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0.45);
+}
+#Youtube, #Trailer, #Autres{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    text-align: center;
+    font-family:'Fredoka',sans-serif;
+    font-size: 1.5em;
+    width: 100%;
+    background-color: rgba(36, 36, 36, 0.795);
+}
+#Intro{
+    padding-top: 25px;
+}
+#TextIntro{
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+    text-align: center;
+    font-family:'Fredoka',sans-serif;
+    font-size: 1.3em;
+    width: 100%;
+    background-color: rgba(36, 36, 36, 0.795);
+}
+
+/* ***** Unreal Ungine ***** */
+
+#UnrealUngine{
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+    background-image: url(Media/BackgroundPhotoshop.jpg);
+}
+#UnrealUngine a{
+    text-decoration: underline;
+    color: white;
+}
+#UnrealUngine h3{
+    text-decoration: underline;
+    font-size: 2em;
+}
+#ExemplesUnrealUngine{
+    font-family:'Fredoka',sans-serif;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+#TextUnrealUngine {
+    padding: 15px 0;
+    font-size: 1.5em;
+    background-color: grey;
+    border-radius: 50px;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0.45);
+}
+#MyGame, #Concept{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    text-align: center;
+    font-family:'Fredoka',sans-serif;
+    font-size: 1.5em;
+    width: 100%;
+    background-color: rgba(36, 36, 36, 0.795);
+}
+#ImgMyGame{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+#Img1, #Img2,#Img3{
+    width: 350px;
+    transition: transform .1s;
+}
+#Img1:hover, #Img2:hover, #Img3:hover{
+        -ms-transform: scale(1.5); /* IE 9 */
+        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(1.5);
+}
